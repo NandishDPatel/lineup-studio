@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Playfair+Display:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    padding: 0px;
+    /* margin: auto; */
+  }
+}
+
+.flickity-prev-next-button{
+  background: rgba(211, 211, 211, 0.442) !important;   
+  color: darkslategray !important;
+  border-radius: 0px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.flickity-prev-next-button:hover{
+  background: black !important;
+  color: white !important;
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  margin: 0px 10px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  color: black;
+  /* background: lightgray; */
+
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after :hover{
+  cursor: pointer;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: black;
+}
+
+.swiper-horizontal > .swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+  background: lightgray;
+}

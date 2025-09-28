@@ -1,0 +1,6 @@
++ task to work on:
+    - achievement section different and its id 
+    - 
+
+
+https://blog.webdevsimplified.com/2023-05/lazy-load-images/

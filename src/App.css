@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.flickity-prev-next-button {
+  background: pink;
+}
