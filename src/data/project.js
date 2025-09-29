@@ -33,7 +33,7 @@ export const projects = [
     ],
     title: "Heaven of Hearts",
     tagline: "memorable moments in memorable spaces",
-    tag: "Interior | Commercial",
+    tag: "Architecture | Interior | Commercial",
     desc: "Our bride and groom's room in the garden restaurant seamlessly blends simplicity with vibrancy. The sloping roof creates a cozy, inner wooden-weighted ceiling effect. A bold color palette, mix-and-match patterns, and unique decorative pieces come together to create a cheerful atmosphere, fostering positivity and uplifting the mood. This dynamic space is perfect for special moments.",
   },
   {

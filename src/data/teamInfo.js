@@ -41,7 +41,7 @@ export const teamMembers1 = [
     role: "Principal Designer",
     bio: "Architecture graduate from Indus University with 7+ years of professional experience in residential and interior design.",
     skills: [
-      "7+ years in architecture & interiors",
+      "8+ years in Architecture & Interior Design",
       "Specialized in high-end residences & farmhouses",
       "Strong background in lifestyle project design"
     ],
