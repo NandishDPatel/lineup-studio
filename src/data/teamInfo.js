@@ -24,8 +24,8 @@ export const teamMembers1 = [
     bio: "Highly accomplished professional, having graduated with a gold medal in her academic pursuits. With over 8 years of experience in her field, she brings a unique blend of theoretical expertise and practical knowledge to her work. Her approachable and effective problem-solving skills make her a sought-after expert in design solutions.",
     experience: [
       "Principal Designer at Lineup Studio (8 years)",
-      "Research project on vernacular furniture at CEPT",
-      "Worked on residential & commercial projects",
+      "Interior designer at Alkesh Patel and Associate (3 years)",
+      "Research assistant at DICRC, CEPT University as an architect at Studio-in-D tale (2 years)",
     ],
     image: "/profile-pictures/isha.jpg",
   },

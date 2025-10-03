@@ -33,7 +33,6 @@ const StaffTeam = () => {
   return (
     <div className="team flex justify-center p-5 sm:p-12 ">
           <MemberCard member={staffMembers[0]} animation={-100} />
-      
     </div>
   );
 };

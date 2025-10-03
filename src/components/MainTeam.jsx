@@ -43,11 +43,11 @@ const MemberCard = ({ member, animation }) => {
         </div>
 
         {/* Tab Content */}
-        <div className="mt-2 sm:mt-4 text-gray-600 text-sm md:text-base h-32">
-          {activeTab === "bio" && <ul className="list-none"><li className="text-justify"> {member.bio} </li> </ul>}
+        <div className="mt-2 sm:mt-4 text-gray-600 text-sm md:text-base">
+          {activeTab === "bio" && <ul className="list-none sm:min-h-36"><li className="text-justify"> {member.bio} </li> </ul>}
 
           {activeTab === "experience" && (
-            <ul className="list-disc pl-5 space-y-1 text-left">
+            <ul className="list-disc pl-5 space-y-1 text-left sm:min-h-36">
               {member.experience.map((exp, i) => (
                 <li key={i}>{exp}</li>
               ))}
