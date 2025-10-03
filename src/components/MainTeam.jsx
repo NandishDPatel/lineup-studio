@@ -26,8 +26,8 @@ const MemberCard = ({ member, animation }) => {
         <p className="text-gray-500 font-medium text-center">{member.role}</p>
 
         {/* Tabs */}
-        <div className="grid grid-cols-3 text-center mt-2 sm:mt-4 border-b">
-          {["bio", "skills", "experience"].map((tab) => (
+        <div className="grid grid-cols-2 text-center mt-2 sm:mt-4 border-b">
+          {["bio", "experience"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -45,14 +45,6 @@ const MemberCard = ({ member, animation }) => {
         {/* Tab Content */}
         <div className="mt-2 sm:mt-4 text-gray-600 text-sm md:text-base h-32">
           {activeTab === "bio" && <ul className="list-none"><li className="text-justify"> {member.bio} </li> </ul>}
-
-          {activeTab === "skills" && (
-            <ul className="list-disc pl-5 space-y-1 text-left">
-              {member.skills.map((skill, i) => (
-                <li key={i}>{skill}</li>
-              ))}
-            </ul>
-          )}
 
           {activeTab === "experience" && (
             <ul className="list-disc pl-5 space-y-1 text-left">

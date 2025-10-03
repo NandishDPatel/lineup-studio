@@ -21,13 +21,7 @@ export const teamMembers1 = [
     id: 1,
     name: "Ar. Isha Bodawala",
     role: "Principal Designer",
-    bio: "Gold Medalist graduate from Indus University with 8+ years of experience in Architecture & Interior Design.",
-    skills: [
-      "Gold Medalist – Indus University",
-      "8+ years in Architecture & Interior Design",
-      "Research in Vernacular Furniture (CEPT, DICRC)",
-      "Expert in detail-oriented & culturally sensitive design"
-    ],
+    bio: "Highly accomplished professional, having graduated with a gold medal in her academic pursuits. With over 8 years of experience in her field, she brings a unique blend of theoretical expertise and practical knowledge to her work. Her approachable and effective problem-solving skills make her a sought-after expert in design solutions.",
     experience: [
       "Principal Designer at Lineup Studio",
       "Research project on vernacular furniture at CEPT",
@@ -39,12 +33,7 @@ export const teamMembers1 = [
     id: 2,
     name: "Ar. Deval Patel",
     role: "Principal Designer",
-    bio: "Architecture graduate from Indus University with 7+ years of professional experience in residential and interior design.",
-    skills: [
-      "8+ years in Architecture & Interior Design",
-      "Specialized in high-end residences & farmhouses",
-      "Strong background in lifestyle project design"
-    ],
+    bio: "Architecture graduate from Indus University with over 8 years of expertise in residential and interior design. Specializing in high-end residences and farmhouses, with a strong foundation in creating lifestyle-focused projects that blend functionality with elegance.",
     experience: [
       "Interned at Hiren Patel Architects",
       "4 years at Apurva Amin Architects",

@@ -87,12 +87,12 @@ const ProjectSlider = forwardRef((props, ref) => {
             </button>
           </div>
           <div className="hidden sm:flex text-center text-white text-sm">
-            <span className="">
-              {selectedProject.desc}
-            </span>
+            <span className="">{selectedProject.desc}</span>
           </div>
+
           <div
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 flex-grow overflow-y-auto`}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 flex-grow 
+             overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent"
           >
             {selectedProject.image.map((img, index) => (
               <ImageWithBlur

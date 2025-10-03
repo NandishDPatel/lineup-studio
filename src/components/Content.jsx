@@ -3,6 +3,7 @@ import TeamInfo from "./TeamInfo";
 import About from "./About";
 import ProjectSlider from "./Slider";
 import Achievement from "./Achievement";
+import Studio from "./Studio";
 
 const Content = () => {
   return (
@@ -11,6 +12,7 @@ const Content = () => {
         <ProjectSlider />
         <About />
         <TeamInfo />
+        <Studio/>
         <Achievement/>
       </div>
     </>

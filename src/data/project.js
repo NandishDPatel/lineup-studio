@@ -33,7 +33,7 @@ export const projects = [
     ],
     title: "Heaven of Hearts",
     tagline: "memorable moments in memorable spaces",
-    tag: "Architecture | Interior | Commercial",
+    tag: "architecture | interior | commercial",
     desc: "Our bride and groom's room in the garden restaurant seamlessly blends simplicity with vibrancy. The sloping roof creates a cozy, inner wooden-weighted ceiling effect. A bold color palette, mix-and-match patterns, and unique decorative pieces come together to create a cheerful atmosphere, fostering positivity and uplifting the mood. This dynamic space is perfect for special moments.",
   },
   {
@@ -71,11 +71,11 @@ export const projects = [
       "/projects/proj2/blurred/IMG_0333-blurr.jpeg",
       "/projects/proj2/blurred/IMG_0341-blurr.jpeg",
     ],
-    title: "Project - 2",
-    tagline: "best landascape project ever in ahmedabad",
-    tag: "Interior | Residential",
+    title: "A Cozy House",
+    tagline: "comfort in every color, harmony in every corner",
+    tag: "interior | residential",
 
-    desc: "A Client came across who wanted to design a toy store which breaks the stereotype of retail store of being boring. The spaces were designed keeping in mind the modern language with pastel colors .Display units were set free flowing in the spaces between. Keeping in mind the Age gap they cater the curves were provides which does not harm the kids roaming around. At centre of the Store is a stage which showcases the trending toys at kid’s eye level.",
+    desc: "Envision a cozy space where clean lines and vibrant hues blend seamlessly, fostering a sense of warmth and belonging. Our design philosophy marries simplicity with distinctive colors, crafting a cozy atmosphere that wraps you in comfort. Thoughtful details, like cleverly camouflaged doors, create a sense of fluidity, eliminating visual barriers and crafting a truly immersive experience.",
   },
   {
     id: 3,
@@ -112,8 +112,8 @@ export const projects = [
       "/projects/proj3/blurred/14-blurr.jpeg",
     ],
     title: "Dramatic Office",
-    tagline: "best landascape project ever in ahmedabad",
-    tag: "Interior Design | Commercial",
+    tagline: "where bold design meets inspired work",
+    tag: "interior Design | commercial",
     desc: "We crafted a bold and captivating workspace that seamlessly blends natural materials like wood, stone, and exposed RCC with striking colors. Strategic lighting adds depth and visual interest, creating a dramatic atmosphere that inspires creativity and productivity. This thoughtfully designed space authentically reflects the company's values and personality.",
   },
   {
@@ -140,7 +140,7 @@ export const projects = [
     ],
     title: "Serene Abode",
     tagline: "calmness dwells here",
-    tag: "Interior | Residential",
+    tag: "interior | residential",
     desc: "Our residence embodies serene ambiance, seamlessly blending warm veneer accents with a calming white palette. Soft textures and materials craft a soothing visual experience, while bright tones infuse tranquility throughout. The result is a peaceful sanctuary that radiates calmness and relaxation.",
   },
   {
@@ -163,7 +163,7 @@ export const projects = [
     ],
     title: "Toy Stories",
     tagline: "designed for playful tales",
-    tag: "Interior | Retail",
+    tag: "interior | retail",
     desc: "A Client came across who wanted to design a toy store which breaks the stereotype of retail store of being boring. The spaces were designed keeping in mind the modern language with pastel colors .Display units were set free flowing in the spaces between. Keeping in mind the Age gap they cater the curves were provides which does not harm the kids roaming around. At centre of the Store is a stage which showcases the trending toys at kid’s eye level.",
   },
   {
@@ -194,7 +194,7 @@ export const projects = [
     ],
     title: "Monotonous House",
     tagline: "best landascape project ever in ahmedabad",
-    tag: "Store Design | Wedding Clothes store",
+    tag: "interior | residential",
     desc: "Transforming a low-budget apartment into a stunning residence, we created a simple yet sophisticated space that seamlessly merges minimalism with art. The interior design optimizes functionality within the existing architecture, resulting in a harmonious blend of form and function. With elegant design elements, carefully curated details, and an optimized layout, this residence showcases a perfect balance of simplicity, artistry, and functionality.",
   }
 ];
