@@ -23,9 +23,9 @@ export const teamMembers1 = [
     role: "Principal Designer",
     bio: "Highly accomplished professional, having graduated with a gold medal in her academic pursuits. With over 8 years of experience in her field, she brings a unique blend of theoretical expertise and practical knowledge to her work. Her approachable and effective problem-solving skills make her a sought-after expert in design solutions.",
     experience: [
-      "Principal Designer at Lineup Studio",
+      "Principal Designer at Lineup Studio (8 years)",
       "Research project on vernacular furniture at CEPT",
-      "Worked on residential & commercial projects"
+      "Worked on residential & commercial projects",
     ],
     image: "/profile-pictures/isha.jpg",
   },
@@ -35,9 +35,10 @@ export const teamMembers1 = [
     role: "Principal Designer",
     bio: "Architecture graduate from Indus University with over 8 years of expertise in residential and interior design. Specializing in high-end residences and farmhouses, with a strong foundation in creating lifestyle-focused projects that blend functionality with elegance.",
     experience: [
+      "Principal Designer at Lineup Studio (8 years)",
       "Interned at Hiren Patel Architects",
       "4 years at Apurva Amin Architects",
-      "3 years in interior design across residential projects"
+      "3 years in interior design across residential projects",
     ],
     image: "/profile-pictures/deval.jpg",
   },
@@ -48,9 +49,9 @@ export const staffMembers = [
     id: 1,
     name: "Dhara Thakkar",
     role: "Junior Architect",
-    image: "/profile-pictures/dhara.jpg"
-  }
-]
+    image: "/profile-pictures/dhara.jpg",
+  },
+];
 
 export const LineupMission =
   "Line Up Studio, based in Ahmedabad, is a dynamic design firm specializing in Architecture, Interior, and Landscape Designing in residential, commercial and retail segments. With over 8 years of experience, our passionate duo is committed to core design values, creating spaces that seamlessly blend functionality and aesthetics. We prioritize not just the final outcome but also the design process, ensuring a thoughtful and fulfilling experience for every user.";
@@ -58,10 +59,13 @@ export const LineupMission =
 export const AchievementDesc = {
   image: "/achievement.jpg",
   desc: "We are a team of two passionate designers, Ar. Isha Bodawala and Ar. Deval Patel, who believe in the power of design to transform spaces and lives. Our mission is to create environments that inspire, uplift, and enhance the human experience. With a focus on innovation, sustainability, and user-centric design, we strive to deliver exceptional results that exceed our clients' expectations.",
-  awardDesc: "National Architecture and Interior Design Excellence Awards 2024.",
-  awardName:"Creative & Promising Architecture & Interior Design Firm of the Year 2024",
-  awardOrganization: "Gujarat Award under Residential Projects & Commercial Projects",
-//  National Architecture and Interior Design Excellence Awards 2024.
-// Creative & Promising Architecture & Interior Design Firm of the Year 2024
-// Gujarat Award under “Residential Projects & Commercial Projects ”
+  awardDesc:
+    "National Architecture and Interior Design Excellence Awards 2024.",
+  awardName:
+    "Creative & Promising Architecture & Interior Design Firm of the Year 2024",
+  awardOrganization:
+    "Gujarat Award under Residential Projects & Commercial Projects",
+  //  National Architecture and Interior Design Excellence Awards 2024.
+  // Creative & Promising Architecture & Interior Design Firm of the Year 2024
+  // Gujarat Award under “Residential Projects & Commercial Projects ”
 };
