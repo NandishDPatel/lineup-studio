@@ -148,7 +148,7 @@ const ContactForm = forwardRef((props, ref) => {
 
           {submitStatus === "success" && (
             <p className="mt-2 text-green-600 text-center">
-              Message sent successfully!
+              Message sent successfully! Lineup Studio team will contact you soon. No need to send message again :)
             </p>
           )}
           {submitStatus === "error" && (
