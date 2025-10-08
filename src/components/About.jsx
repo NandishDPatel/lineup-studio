@@ -6,12 +6,17 @@ import { AnimatedText } from "./LandingPage";
 const About = forwardRef((props, ref) => {
   return (
     <>
-      <div
+      {/* <div
         ref={ref}
         className="container max-w-full lg:px-32 sm:px-12 px-5 mt-6 bg-gray-200 border-y-2 border-black"
         id="aboutSec"
+      > */}
+      <div
+        ref={ref}
+        className="container max-w-full lg:px-32 sm:px-12 px-5 mt-6 text-black bg-gray-200"
+        id="aboutSec"
       >
-        <div className="p-1 sm:p-3">
+        <div className="p-1 sm:p-3 ">
           <motion.h2
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0 }}

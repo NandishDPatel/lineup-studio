@@ -15,11 +15,15 @@ const Footer = () => {
   };
   return (
     <>
-      <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 border-y-2 border-black">
+      {/* <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 border-y-2 border-black"> */}
+      
+      <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 ">
+        <div className="p-3">
+
         <motion.h2
           whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 2 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 2 }}
           className="m-auto text-center text-2xl font-bold border-b-2 py-2 max-w-full"
         >
           Contact Us
@@ -49,7 +53,11 @@ const Footer = () => {
         <div className="text-center">
           <p>lineup.00studio@gmail.com</p>
         </div>
-        <p className="text-center">© 2025 LineUp Studio | All rights are reserved </p>
+        <p className="text-center">
+          © 2025 LineUp Studio | All rights are reserved{" "}
+        </p>
+        </div>
+        
       </div>
     </>
   );
