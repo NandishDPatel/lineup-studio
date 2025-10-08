@@ -40,10 +40,7 @@ const Studio = forwardRef((props, ref) => {
           </motion.h2>
         </div>
 
-        <div
-          className="slideshow w-full overflow-hidden bg-black"
-          ref={ref}
-        >
+        <div className="slideshow w-full overflow-hidden bg-black" ref={ref}>
           <div
             className="gallery js-flickity mx-auto text-center"
             ref={galleryRef}
@@ -51,13 +48,13 @@ const Studio = forwardRef((props, ref) => {
             {studioPhotos.map((photo) => (
               <div
                 key={photo.id}
-                className="gallery-cell flex-shrink-0 w-full sm:h-screen flex items-center justify-center"
+                className="gallery-cell flex-shrink-0 w-full h-[60vh] sm:h-screen flex items-center justify-center"
               >
                 <img
                   src={photo.url}
                   alt="studio image"
                   loading="lazy"
-                  className="object-cover w-full sm:h-full"
+                  className="object-cover w-full h-full"
                 />
               </div>
             ))}
