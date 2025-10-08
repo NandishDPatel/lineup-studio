@@ -11,7 +11,6 @@ const Header = () => {
   }
 };
   return (
-    // if you want to fix the header to the top just add 'sticky' in classname
     <header className="bg-white p-1 top-0 z-50"> 
       <div className="mx-auto flex items-center justify-between px-4">
         <div className="flex-shrink-0">

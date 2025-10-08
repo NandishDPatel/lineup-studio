@@ -8,9 +8,8 @@ const LandingPage = () => {
       <div className="max-w-full h-screen bg-gray-300 text-center flex flex-col items-center justify-center">
         <div>
           <AnimatedText
-            text={["L I N E U P  S T U D I O"]} // pass as array instead of string
+            text={["L I N E U P  S T U D I O"]}
             el="h1"
-            // staggerSpeed={0.15}
             className="text-3xl md:text-4xl lg:text-[100px] font-small text-gray-500 text-center"
             once={false}
             repeatDelay={5000}
@@ -44,25 +43,6 @@ export const AnimatedText = ({
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once });
-
-  // useEffect(() => {
-  //   let timeout;
-  //   const show = () => {
-  //     controls.start("visible");
-  //     if (repeatDelay) {
-  //       timeout = setTimeout(async () => {
-  //         await controls.start("hidden");
-  //         controls.start("visible");
-  //       }, repeatDelay);
-  //     }
-  //   };
-
-  //   if (isInView) show();
-  //   else controls.start("hidden");
-
-  //   return () => clearTimeout(timeout);
-  // }, [isInView]);
-
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

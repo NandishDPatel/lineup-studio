@@ -8,7 +8,6 @@ const MapEmbed = () => {
       transition={{ duration: 1.5 }}
       className="mx-auto md:px-5 max-w-6xl"
     >
-      {/* Map Container with Styled Frame */}
       <div className="relative overflow-hidden shadow-2xl border-2 md:border-4 border-black hover:border-gray-500 transition-all duration-300">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1542.8535993604942!2d72.53857853941668!3d23.113747889322443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e830e4aae983d%3A0xaee8a0cd3e6df8b0!2sMoney%20Plant%20High%20Street!5e0!3m2!1sen!2sin!4v1749040403262!5m2!1sen!2sin"
@@ -23,7 +22,6 @@ const MapEmbed = () => {
           }}
         />
 
-        {/* Floating Info Badge */}
         <div className="absolute bottom-4 left-4 bg-yellow-100 backdrop-blur-sm px-3 py-2 shadow-lg">
           <p className="font-semibold text-gray-800">
             {" "}
@@ -35,7 +33,6 @@ const MapEmbed = () => {
         </div>
       </div>
 
-      {/* Optional: Directions Button */}
       <div className="mt-3">
         <a
           href="https://maps.google.com?daddr=Money+Plant+High+Street+Ahmedabad"

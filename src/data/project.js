@@ -44,7 +44,6 @@ export const projects = [
       "/projects/proj2/IMG_0162.JPG",
       "/projects/proj2/IMG_0196.JPG",
       "/projects/proj2/IMG_0213.JPG",
-
       "/projects/proj2/IMG_0263.JPG",
       "/projects/proj2/IMG_0281.JPG",
       "/projects/proj2/IMG_0282.JPG",
@@ -196,5 +195,5 @@ export const projects = [
     tagline: "best landascape project ever in ahmedabad",
     tag: "interior | residential",
     desc: "Transforming a low-budget apartment into a stunning residence, we created a simple yet sophisticated space that seamlessly merges minimalism with art. The interior design optimizes functionality within the existing architecture, resulting in a harmonious blend of form and function. With elegant design elements, carefully curated details, and an optimized layout, this residence showcases a perfect balance of simplicity, artistry, and functionality.",
-  }
+  },
 ];

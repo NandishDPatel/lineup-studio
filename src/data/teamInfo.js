@@ -3,24 +3,6 @@ export const teamMembers = [
     id: 1,
     name: "Ar. Isha Bodawala",
     role: "Principal Designer",
-    bio: "Gold Medalist graduate from Indus University, recognized for her outstanding academic achievements and passion for architecture and interior design. With over eight years of professional experience, she combines technical mastery with creative innovation, crafting exceptional design solutions at Lineup Studio. Her deep appreciation for detail was further refined through a notable research project on vernacular furniture at DICRC, CEPT University, enriching her design philosophy with cultural sensitivity and functional elegance.",
-    image: "/profile-pictures/isha.jpg",
-  },
-  {
-    id: 2,
-    name: "Ar. Deval Patel",
-    role: "Principal Designer",
-    bio: "An architecture graduate from Indus University, she brings over seven years of experience to the field. Before joining Lineup Studio, she interned at Hiren Patel Architects and spent nearly four years at Apurva Amin Architects, focusing on high-end residences and farmhouses. Additionally, she has three years of experience in interior design, contributing to a diverse portfolio of residential and lifestyle projects.",
-    image: "/profile-pictures/deval.jpg",
-  },
-];
-
-// data/teamInfo.js
-export const teamMembers1 = [
-  {
-    id: 1,
-    name: "Ar. Isha Bodawala",
-    role: "Principal Designer",
     bio: "Highly accomplished professional, having graduated with a gold medal in her academic pursuits. With over 8 years of experience in her field, she brings a unique blend of theoretical expertise and practical knowledge to her work. Her approachable and effective problem-solving skills make her a sought-after expert in design solutions.",
     experience: [
       "Principal Designer at Lineup Studio (8 years)",
@@ -65,7 +47,4 @@ export const AchievementDesc = {
     "Creative & Promising Architecture & Interior Design Firm of the Year 2024",
   awardOrganization:
     "Gujarat Award under Residential Projects & Commercial Projects",
-  //  National Architecture and Interior Design Excellence Awards 2024.
-  // Creative & Promising Architecture & Interior Design Firm of the Year 2024
-  // Gujarat Award under “Residential Projects & Commercial Projects ”
 };

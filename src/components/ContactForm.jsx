@@ -11,19 +11,18 @@ const ContactForm = forwardRef((props, ref) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Initialize EmailJS with your Public Key
-    emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_API_KEY); // Replace with your actual public key
+    emailjs.init(import.meta.env.REACT_APP_EMAILJS_PUBLIC_API_KEY); 
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, // EmailJS service ID
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
-        import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY // EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_API_KEY 
       )
       .then(() => {
         setSubmitStatus("success");
-        e.target.reset(); // Reset form after successful submission
+        e.target.reset(); 
       })
       .catch(() => {
         setSubmitStatus("error");

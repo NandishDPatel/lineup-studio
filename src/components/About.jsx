@@ -6,11 +6,6 @@ import { AnimatedText } from "./LandingPage";
 const About = forwardRef((props, ref) => {
   return (
     <>
-      {/* <div
-        ref={ref}
-        className="container max-w-full lg:px-32 sm:px-12 px-5 mt-6 bg-gray-200 border-y-2 border-black"
-        id="aboutSec"
-      > */}
       <div
         ref={ref}
         className="container max-w-full lg:px-32 sm:px-12 px-5 mt-6 text-black bg-gray-200"

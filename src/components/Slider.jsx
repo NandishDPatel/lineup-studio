@@ -75,7 +75,6 @@ const ProjectSlider = forwardRef((props, ref) => {
         ))}
       </div>
 
-      {/* Image Grid Modal */}
       {isModalOpen && selectedProject && projects && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto p-3 flex flex-col">
           <div className="flex justify-end p-1 text-center relative">

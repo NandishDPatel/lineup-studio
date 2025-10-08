@@ -20,10 +20,12 @@ const Achievement = () => {
           </motion.h2>
           <div className="achv">
             <div className="grid justify-center sm:flex justify-between items-start gap-2">
-              <motion.div 
-              whileInView={{ opacity: 1, x: 0 }}
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -50 }}
-                transition={{ duration: 1 }}className="image  w-1/2 mx-auto sm:w-1/3 sm:me-2">
+                transition={{ duration: 1 }}
+                className="image  w-1/2 mx-auto sm:w-1/3 sm:me-2"
+              >
                 <img
                   src={AchievementDesc.image}
                   alt="Achievement"
@@ -32,23 +34,30 @@ const Achievement = () => {
                   className="object-contain shadow-lg text-center mx-auto"
                 />
               </motion.div>
-              <motion.div           
-              className="sm:w-2/3 sm:ms-2 sm:mt-0 flex flex-col gap-1 sm:gap-2 text-center justify-around items-start">
-                <motion.p  whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 50 }}
-                transition={{ duration: 1 }} 
-                className="text-base sm:text-lg font-bold text-gray-900 py-1 sm:py-2">
+              <motion.div className="sm:w-2/3 sm:ms-2 sm:mt-0 flex flex-col gap-1 sm:gap-2 text-center justify-around items-start">
+                <motion.p
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 50 }}
+                  transition={{ duration: 1 }}
+                  className="text-base sm:text-lg font-bold text-gray-900 py-1 sm:py-2"
+                >
                   {AchievementDesc.awardName}
                 </motion.p>
-                <motion.p  whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 70 }}
-                transition={{ duration: 1.5 }}  className="text-base sm:text-lg font-light text-gray-700">
+                <motion.p
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 70 }}
+                  transition={{ duration: 1.5 }}
+                  className="text-base sm:text-lg font-light text-gray-700"
+                >
                   {AchievementDesc.awardOrganization}
                 </motion.p>
-                
-                <motion.p  whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 2 }} className="text-base sm:text-md font-normal text-gray-600 mt-2">
+
+                <motion.p
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  transition={{ duration: 2 }}
+                  className="text-base sm:text-md font-normal text-gray-600 mt-2"
+                >
                   {AchievementDesc.awardDesc}
                 </motion.p>
               </motion.div>

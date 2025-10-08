@@ -13,6 +13,6 @@ export const studioPhotos = [
   },
   {
     id: 4,
-    url: "/studio/04.jpg"
-  }
+    url: "/studio/04.jpg",
+  },
 ];

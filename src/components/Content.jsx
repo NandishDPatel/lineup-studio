@@ -12,8 +12,8 @@ const Content = () => {
         <ProjectSlider />
         <About />
         <TeamInfo />
-        <Studio/>
-        <Achievement/>
+        <Studio />
+        <Achievement />
       </div>
     </>
   );
