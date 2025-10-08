@@ -41,7 +41,7 @@ const Studio = forwardRef((props, ref) => {
         </div>
 
         <div
-          className="slideshow w-full h-screen overflow-hidden bg-black"
+          className="slideshow w-full h-auto sm:h-screen overflow-hidden bg-black"
           ref={ref}
         >
           <div
@@ -51,13 +51,13 @@ const Studio = forwardRef((props, ref) => {
             {studioPhotos.map((photo) => (
               <div
                 key={photo.id}
-                className="gallery-cell flex-shrink-0 w-full h-screen flex items-center justify-center"
+                className="gallery-cell flex-shrink-0 w-full h-auto sm:h-screen flex items-center justify-center"
               >
                 <img
                   src={photo.url}
                   alt="studio image"
                   loading="lazy"
-                  className="w-full h-screen object-cover"
+                  className="object-cover"
                 />
               </div>
             ))}
