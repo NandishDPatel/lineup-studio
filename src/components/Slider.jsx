@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import "../index.css";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
+import { BlurImage } from "./Studio.jsx";
 
 const ProjectSlider = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -40,11 +41,11 @@ const ProjectSlider = forwardRef((props, ref) => {
             className="gallery-cell w-full h-screen relative cursor-pointer"
             onClick={() => handleImageClick(project)}
           >
-            <img
-              src={project.image[0]}
+
+            <BlurImage
+              img={project.image[0]}
+              blurredImg={project.imageBlurred[0]}
               alt={project.title}
-              loading="lazy"
-              className="absolute h-full w-full object-cover"
             />
 
             <motion.span
@@ -85,6 +86,9 @@ const ProjectSlider = forwardRef((props, ref) => {
               ×
             </button>
           </div>
+          <div className="text-center text-white text-lg font-medium ">
+            <p className="pb-1">{selectedProject.title}</p>
+          </div>
           <div className="hidden sm:flex text-center text-white text-sm">
             <span className="">{selectedProject.desc}</span>
           </div>
@@ -104,8 +108,8 @@ const ProjectSlider = forwardRef((props, ref) => {
           </div>
 
           <div className="text-center text-white py-4">
-            <span className="text-xl font-medium px-2 py-1">
-              {selectedProject.title} | {selectedProject.tag}
+            <span className="text-base font-medium px-2 py-1">
+              {selectedProject.tag}
             </span>
           </div>
         </div>

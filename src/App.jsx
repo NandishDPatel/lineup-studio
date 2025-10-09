@@ -12,39 +12,39 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLanding(false);
-    }, 3000); // Adjust duration to match landing animation
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    // <AnimatePresence mode="wait">
-    //   {showLanding ? (
-    //     <motion.div
-    //       key="landing"
-    //       initial={{ opacity: 1 }}
-    //       exit={{ opacity: 0 }}
-    //       transition={{ duration: 1 }} // fade-out duration
-    //     >
-    //       <LandingPage />
-    //     </motion.div>
-    //   ) : (
-    //     <motion.div
-    //       key="home"
-    //       initial={{ opacity: 0 }}
-    //       animate={{ opacity: 1 }}
-    //       transition={{ duration: 1 }} // fade-in duration
-    //     >
-    //       <Header />
-    //       <Content />
-    //       <Footer />
-    //     </motion.div>
-    //   )}
-    // </AnimatePresence>
-    <>
-      <Header />
-      <Content />
-      <Footer />
-    </>
+    <AnimatePresence mode="wait">
+      {showLanding ? (
+        <motion.div
+          key="landing"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }} // fade-out duration
+        >
+          <LandingPage />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="home"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }} // fade-in duration
+        >
+          <Header />
+          <Content />
+          <Footer />
+        </motion.div>
+      )}
+    </AnimatePresence>
+    // <>
+    //   <Header />
+    //   <Content />
+    //   <Footer />
+    // </>
   );
 }
 
