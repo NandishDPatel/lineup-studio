@@ -112,7 +112,7 @@ export const projects = [
     ],
     title: "Dramatic Office",
     tagline: "where bold design meets inspired work",
-    tag: "interior Design | commercial",
+    tag: "interior | commercial",
     desc: "We crafted a bold and captivating workspace that seamlessly blends natural materials like wood, stone, and exposed RCC with striking colors. Strategic lighting adds depth and visual interest, creating a dramatic atmosphere that inspires creativity and productivity. This thoughtfully designed space authentically reflects the company's values and personality.",
   },
   {

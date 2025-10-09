@@ -16,7 +16,7 @@ const Achievement = () => {
             transition={{ duration: 2 }}
             className="text-center border-b-2 m-auto max-w-full text-2xl font-bold py-2 mb-3"
           >
-            Achievment
+            Achievement
           </motion.h2>
           <div className="achv">
             <div className="grid justify-center sm:flex justify-between items-start gap-2">
