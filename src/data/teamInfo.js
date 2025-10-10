@@ -6,8 +6,9 @@ export const teamMembers = [
     bio: "Highly accomplished professional, having graduated with a gold medal in her academic pursuits. With over 8 years of experience in her field, she brings a unique blend of theoretical expertise and practical knowledge to her work. Her approachable and effective problem-solving skills make her a sought-after expert in design solutions.",
     experience: [
       "Principal Designer at Lineup Studio (8 years)",
+      "Architect at Studio-in-D tale (2 years)",
+      "Research assistant at DICRC, CEPT University (1 year)",
       "Interior designer at Alkesh Patel and Associate (3 years)",
-      "Research assistant at DICRC, CEPT University as an architect at Studio-in-D tale (2 years)",
     ],
     image: "/profile-pictures/isha.jpg",
   },
@@ -15,12 +16,12 @@ export const teamMembers = [
     id: 2,
     name: "Ar. Deval Patel",
     role: "Principal Designer",
-    bio: "Architecture graduate from Indus University with over 8 years of expertise in residential and interior design. Specializing in high-end residences and farmhouses, with a strong foundation in creating lifestyle-focused projects that blend functionality with elegance.",
+    bio: "Graduate from Indus University with over 8 years of experience in architecture and interior, She excel in crafting high-end residences and farmhouses that seamlessly blend style and functionality. Her expertise lies in creating lifestyle-focused projects that showcase color combinations, elevating spaces into true works of art to transform your vision into a reality",
     experience: [
-      "Principal Designer at Lineup Studio (8 years)",
-      "Interned at Hiren Patel Architects",
-      "4 years at Apurva Amin Architects",
-      "3 years in interior design across residential projects",
+      "Principal Designer at Lineup Studio (8 years)", 
+      "Architect at Apurva Amin Architects (4 years)",
+      "Interior designer at APA and Marigold Interiors (3 years)",
+      "Interned at Hiren Patel Architects"
     ],
     image: "/profile-pictures/deval.jpg",
   },

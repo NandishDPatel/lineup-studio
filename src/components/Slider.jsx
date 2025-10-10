@@ -52,7 +52,7 @@ const ProjectSlider = forwardRef((props, ref) => {
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 2 }}
-              className="absolute top-5 transform -translate-x-1/2 text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-white px-2 py-1 rounded"
+              className="absolute top-5 transform -translate-x-1/2 text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-white px-2 py-1 rounded tracking-wider"
             >
               {project.title}
             </motion.span>
@@ -60,7 +60,7 @@ const ProjectSlider = forwardRef((props, ref) => {
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 3 }}
-              className="absolute top-20 transform -translate-x-1/2 text-sm text-white px-2 py-1 rounded w-full"
+              className="absolute top-20 transform -translate-x-1/2 text-sm text-white px-2 py-1 rounded w-full tracking-wide"
             >
               {project.tagline}
             </motion.span>
@@ -68,7 +68,7 @@ const ProjectSlider = forwardRef((props, ref) => {
               whileInView={{ opacity: 1, y: -50 }}
               initial={{ opacity: 0, y: -120 }}
               transition={{ duration: 2 }}
-              className="absolute bottom-10 transform -translate-x-1/2 text-sm font-medium text-white px-2 py-1 rounded"
+              className="absolute bottom-10 transform -translate-x-1/2 text-sm font-medium text-white px-2 py-1 rounded tracking-wider"
             >
               {project.tag}
             </motion.span>
@@ -86,7 +86,7 @@ const ProjectSlider = forwardRef((props, ref) => {
               ×
             </button>
           </div>
-          <div className="text-center text-white text-lg font-medium ">
+          <div className="text-center text-white text-lg font-medium tracking-widest">
             <p className="pb-1">{selectedProject.title}</p>
           </div>
           <div className="hidden sm:flex text-center text-white text-sm">
@@ -108,7 +108,7 @@ const ProjectSlider = forwardRef((props, ref) => {
           </div>
 
           <div className="text-center text-white py-4">
-            <span className="text-base font-medium px-2 py-1">
+            <span className="text-base font-medium px-2 py-1 tracking-wider">
               {selectedProject.tag}
             </span>
           </div>

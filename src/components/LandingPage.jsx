@@ -5,12 +5,12 @@ import { useEffect, useRef } from "react";
 const LandingPage = () => {
   return (
     <>
-      <div className="max-w-full h-screen bg-gray-300 text-center flex flex-col items-center justify-center">
+      <div className="relative max-w-full h-screen bg-gray-300 text-center flex flex-col items-center justify-center">
         <div>
           <AnimatedText
             text={["L I N E U P  S T U D I O"]}
             el="h1"
-            className="text-3xl md:text-4xl lg:text-[100px] font-small text-gray-500 text-center"
+            className="text-3xl tracking-widest sm:text-[50px] lg:text-[100px] font-small text-black text-center"
             once={false}
             repeatDelay={5000}
           />
@@ -19,7 +19,7 @@ const LandingPage = () => {
           <img
             src="/logo-removebg-preview.png"
             alt="Lineup Studio Logo"
-            className="h-32 w-32 object-contain rounded-md hover:cursor-pointer"
+            className="absolute bottom-10 h-24 w-24 sm:h-32 sm:w-32 object-contain rounded-md hover:cursor-pointer"
           />
         </div>
       </div>

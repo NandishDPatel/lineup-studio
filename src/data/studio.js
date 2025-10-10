@@ -19,4 +19,9 @@ export const studioPhotos = [
     url: "/studio/04.jpg",
     blurred: "/studio/04-blurred.JPG",
   },
+  {
+    id: 5,
+    url: "/studio/05.PNG",
+    blurred: "/studio/05-blurred.PNG"
+  }
 ];
