@@ -10,7 +10,7 @@ const LandingPage = () => {
           <AnimatedText
             text={["L I N E U P  S T U D I O"]}
             el="h1"
-            className="text-3xl tracking-widest sm:text-[50px] lg:text-[100px] font-small text-black text-center"
+            className="text-3xl tracking-normal sm:tracking-widest sm:text-[50px] lg:text-[100px] font-small text-black text-center"
             once={false}
             repeatDelay={5000}
           />
