@@ -1,9 +1,10 @@
-import React from "react";
-import TeamInfo from "./TeamInfo";
-import About from "./About";
+import React, { Suspense } from "react";
 import ProjectSlider from "./Slider";
-import Achievement from "./Achievement";
-import Studio from "./Studio";
+
+const About = React.lazy(() => import("./About"));
+const Achievement = React.lazy(() => import("./Achievement"));
+const TeamInfo = React.lazy(() => import("./TeamInfo"));
+const Studio = React.lazy(() => import("./Studio"));
 
 const Content = () => {
   return (
@@ -11,9 +12,11 @@ const Content = () => {
       <div className="w-full m-auto">
         <ProjectSlider />
         <About />
-        <TeamInfo />
-        <Studio />
-        <Achievement />
+        <Suspense fallback={null}>
+          <TeamInfo />
+          <Studio />
+          <Achievement />
+        </Suspense>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import { studioPhotos } from "../data/studio";
 import { motion } from "motion/react";
 import Flickity from "flickity";
 import "flickity/css/flickity.css";
-import "../index.css";
+import '../App.css';
 
 export const BlurImage = ({ img, blurredImg, alt }) => {
   const [isLoaded, setIsLoaded] = useState(false);

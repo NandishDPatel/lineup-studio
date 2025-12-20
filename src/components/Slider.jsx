@@ -3,7 +3,6 @@ import Flickity from "flickity";
 import "flickity/css/flickity.css";
 import { projects } from "../data/project.js";
 import { motion } from "motion/react";
-import "../index.css";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
 import { BlurImage } from "./Studio.jsx";
@@ -41,7 +40,6 @@ const ProjectSlider = forwardRef((props, ref) => {
             className="gallery-cell w-full h-screen relative cursor-pointer"
             onClick={() => handleImageClick(project)}
           >
-
             <BlurImage
               img={project.image[0]}
               blurredImg={project.imageBlurred[0]}
@@ -94,8 +92,11 @@ const ProjectSlider = forwardRef((props, ref) => {
           </div>
 
           <div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 flex-grow 
-             overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 flex-grow
+             overflow-y-auto h-64
+             scrollbar-thin
+             scrollbar-thumb-black
+             scrollbar-track-transparent"
           >
             {selectedProject.image.map((img, index) => (
               <ImageWithBlur

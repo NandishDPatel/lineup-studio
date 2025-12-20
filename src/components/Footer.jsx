@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import MapEmbed from "./MapEmbed";
 import ContactForm from "./ContactForm";
 import { motion } from "motion/react";
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -15,7 +15,7 @@ const Footer = () => {
   };
   return (
     <>
-      <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 ">
+      <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 " id="contactSec" ref={ref}>
         <div className="p-3">
           <motion.h2
             whileInView={{ opacity: 1 }}
@@ -57,6 +57,6 @@ const Footer = () => {
       </div>
     </>
   );
-};
+});
 
 export default Footer;
