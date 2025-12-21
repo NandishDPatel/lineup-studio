@@ -14,3 +14,46 @@ https://blog.webdevsimplified.com/2023-05/lazy-load-images/
 + inconsistant space between images inside slider page
 + form validation and placeholders
 + skelton effect on lazy loading
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+
+    Basic SEO
+    <title>Lineup Studio</title>
+    <meta
+      name="description"
+      content="Lineup Studio is an architecture and interior design studio specializing in modern, sustainable, and functional spaces."
+    />
+    <meta
+      name="keywords"
+      content="architecture studio, interior design, modern architecture, sustainable design, Lineup Studio, best architecture firm, architectre ahmedabad, best architecture firm in ahmedabad, top architecture firm in ahmedabad, women in architecture, women in design, architecture firm in ahmedabad, top architecture firm in ahmedabad,"
+    />
+    <meta name="author" content="Lineup Studio" />
+
+     Mobile -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> --> -->
+
+    <!-- Open Graph (Google + social sharing)
+    <meta
+      property="og:title"
+      content="Lineup Studio | Architecture & Interior Design"
+    />
+    <meta
+      property="og:description"
+      content="Designing modern and sustainable architectural spaces."
+    /> -->
+   
+    <!-- <link rel="icon" href="./logo.jpg" /> -->
+
+    <!-- Permissions -->
+    <!-- <meta http-equiv="Permissions-Policy" content="unload=(none)" /> -->
+ <!-- </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> -->
