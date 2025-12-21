@@ -12,7 +12,7 @@ const Content = () => {
       <div className="w-full m-auto">
         <ProjectSlider />
         <About />
-        <Suspense fallback={null}>
+        <Suspense fallback={() => <div>Loading data...</div>}>
           <TeamInfo />
           <Studio />
           <Achievement />

@@ -7,7 +7,7 @@ import LandingPage from './components/LandingPage';
 import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
-  // const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(true);
 
   // useEffect(() => {
   //   const timer = setTimeout(() => {

@@ -6,9 +6,9 @@ const MapEmbed = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 100 }}
       transition={{ duration: 1.5 }}
-      className="mx-auto md:px-5 max-w-6xl"
+      className="mx-auto md:px-5 max-w-6xl text-white"
     >
-      <div className="relative overflow-hidden shadow-2xl border-2 md:border-4 border-black hover:border-gray-500 transition-all duration-300">
+      <div className="relative overflow-hidden shadow-2xl border-2 border-black transition-all duration-300">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1542.8535993604942!2d72.53857853941668!3d23.113747889322443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e830e4aae983d%3A0xaee8a0cd3e6df8b0!2sMoney%20Plant%20High%20Street!5e0!3m2!1sen!2sin!4v1749040403262!5m2!1sen!2sin"
           className="w-full h-60 md:h-72"
@@ -38,7 +38,7 @@ const MapEmbed = () => {
           href="https://maps.google.com?daddr=Money+Plant+High+Street+Ahmedabad"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center px-6 py-3 bg-black text-white hover:bg-gray-500 transition-colors shadow-lg justify-center"
+          className="inline-flex w-full items-center px-6 py-3 bg-black hover:bg-gray-500 transition-colors justify-center"
         >
           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path

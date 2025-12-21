@@ -4,7 +4,7 @@ const Header = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      window.scrollTo({
+      element.scrollIntoView({
         top: element.offsetTop - 50,
         behavior: "smooth",
       });

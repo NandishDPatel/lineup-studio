@@ -9,6 +9,8 @@ https://blog.webdevsimplified.com/2023-05/lazy-load-images/
 + add image logo of website on the tab (need new logo to keep it on the tab) 
 + improve performance of the website
 + scroll bar isn't coming black in laptop full screen
-+ hover line in all 3 sections in header
-+ font style of the website
 + semantic elements usage to make SEO better
+
++ inconsistant space between images inside slider page
++ form validation and placeholders
++ skelton effect on lazy loading

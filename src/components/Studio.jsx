@@ -3,7 +3,7 @@ import { studioPhotos } from "../data/studio";
 import { motion } from "motion/react";
 import Flickity from "flickity";
 import "flickity/css/flickity.css";
-import '../App.css';
+import "../App.css";
 
 export const BlurImage = ({ img, blurredImg, alt }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,7 +11,7 @@ export const BlurImage = ({ img, blurredImg, alt }) => {
   return (
     <div className="relative h-full w-full overflow-hidden">
       <div
-        className={`absolute inset-0 bg-cover bg-center blur-lg transition-opacity duration-500 ${
+        className={`absolute inset-0 bg-cover bg-center blur-lg transition-opacity duration-500 border border-2 border-black ${
           isLoaded ? "opacity-0" : "opacity-100"
         }`}
         style={{
@@ -19,19 +19,24 @@ export const BlurImage = ({ img, blurredImg, alt }) => {
         }}
       ></div>
 
-      <img
-        src={img}
-        alt={alt}
-        onLoad={() => setIsLoaded(true)}
-        onError={() => {
-          console.error("Image failed to load:", img);
-          setIsLoaded(true);
-        }}
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        loading="lazy"
-      />
+      <picture >
+        <img
+          src={img}
+          role="presentation"
+          alt={alt}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => {
+            console.error("Image failed to load:", img);
+            setIsLoaded(true);
+          }}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 border border-2 border-black ${
+            isLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          decoding="sync"
+          fetchPriority="high"
+          loading="lazy"
+        />
+      </picture>
     </div>
   );
 };
