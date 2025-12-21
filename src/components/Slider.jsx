@@ -3,7 +3,6 @@ import Flickity from "flickity";
 import "flickity/css/flickity.css";
 import { projects } from "../data/project.js";
 import { motion } from "motion/react";
-import "../index.css";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
 import { BlurImage } from "./Studio.jsx";
@@ -13,9 +12,21 @@ const ProjectSlider = forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden"; // Disable background scroll
+    } else {
+      document.body.style.overflow = ""; // Restore scroll
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
     const flkty = new Flickity(".gallery", {
       wrapAround: true,
-      autoPlay: 3000,
+      autoPlay: 5000,
       prevNextButtons: true,
       pageDots: false,
       cellAlign: "center",
@@ -38,64 +49,69 @@ const ProjectSlider = forwardRef((props, ref) => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="gallery-cell w-full h-screen relative cursor-pointer"
+            className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
             onClick={() => handleImageClick(project)}
           >
-
             <BlurImage
               img={project.image[0]}
               blurredImg={project.imageBlurred[0]}
               alt={project.title}
             />
 
-            <motion.span
+            <motion.h1
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 2 }}
-              className="absolute top-5 transform -translate-x-1/2 text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-white px-2 py-1 rounded tracking-wider"
+              className="absolute top-5 transform w-full text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-black px-2 py-1 rounded tracking-wider font-extrabold"
             >
               {project.title}
-            </motion.span>
-            <motion.span
+            </motion.h1>
+            <motion.h3
               whileInView={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 3 }}
-              className="absolute top-20 transform -translate-x-1/2 text-sm text-white px-2 py-1 rounded w-full tracking-wide"
+              className="absolute top-20 w-full sm:text-sm text-xs text-black w-full tracking-wider font-medium"
             >
               {project.tagline}
-            </motion.span>
-            <motion.span
+            </motion.h3>
+            <motion.h3
               whileInView={{ opacity: 1, y: -50 }}
               initial={{ opacity: 0, y: -120 }}
               transition={{ duration: 2 }}
-              className="absolute bottom-10 transform -translate-x-1/2 text-sm font-medium text-white px-2 py-1 rounded tracking-wider"
+              className="absolute bottom-10 w-full sm:text-sm text-xs sm:font-medium font-base tracking-wider text-black tracking-wider"
             >
               {project.tag}
-            </motion.span>
+            </motion.h3>
           </div>
         ))}
       </div>
 
       {isModalOpen && selectedProject && projects && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto p-3 flex flex-col">
-          <div className="flex justify-end p-1 text-center relative">
+        <div className="fixed inset-0 bg-black text-white bg-opacity-90 z-50 flex flex-col">
+          <div className="flex justify-between p-3">
+            <div></div>
+            <h2 className="tracking-widest text-2xl font-medium">
+              {selectedProject.title}
+            </h2>
             <button
               onClick={() => setIsModalOpen(false)}
-              className="text-white text-2xl hover:text-gray-300 hover:cursor-pointer"
+              className="text-2xl hover:text-gray-300 hover:cursor-pointer"
             >
               ×
             </button>
           </div>
-          <div className="text-center text-white text-lg font-medium tracking-widest">
-            <p className="pb-1">{selectedProject.title}</p>
-          </div>
-          <div className="hidden sm:flex text-center text-white text-sm">
-            <span className="">{selectedProject.desc}</span>
-          </div>
+
+          <h2 className="text-center text-sm px-3 pb-1">
+            {selectedProject.desc}
+          </h2>
 
           <div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 flex-grow 
-             overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3
+             overflow-y-auto
+             scrollbar-thin
+             scrollbar-thumb-black
+             scrollbar-track-transparent
+             px-3"
           >
             {selectedProject.image.map((img, index) => (
               <ImageWithBlur
@@ -107,11 +123,9 @@ const ProjectSlider = forwardRef((props, ref) => {
             ))}
           </div>
 
-          <div className="text-center text-white py-4">
-            <span className="text-base font-medium px-2 py-1 tracking-wider">
-              {selectedProject.tag}
-            </span>
-          </div>
+          <h5 className="text-base font-medium text-center py-2 tracking-wider ">
+            {selectedProject.tag}
+          </h5>
         </div>
       )}
     </div>

@@ -10,8 +10,8 @@ const ImageWithBlur = ({ img, blurredImg, alt }) => {
         className="absolute inset-0 bg-cover bg-no-repeat bg-center blur-lg transition-transform duration-300 ease-in-out"
         style={{
           backgroundImage: `url(${blurredImg})`,
-          opacity: isLoaded ? 0 : 1,
         }}
+        decoding="async"
       ></div>
 
       <img
@@ -26,6 +26,7 @@ const ImageWithBlur = ({ img, blurredImg, alt }) => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         loading="lazy"
+        decoding="async"
       />
     </div>
   );

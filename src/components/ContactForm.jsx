@@ -36,7 +36,7 @@ const ContactForm = forwardRef((props, ref) => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: -100 }}
       transition={{ duration: 1.5 }}
-      className="container bg-white max-w-full p-2 md:p-4 mx-auto border-black border-2 md:border-4 hover:border-gray-500 "
+      className="container bg-white max-w-full p-2 md:p-4 mx-auto border-black border-2"
       id="contactSec"
       ref={ref}
     >
