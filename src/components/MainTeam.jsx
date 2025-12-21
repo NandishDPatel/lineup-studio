@@ -19,10 +19,10 @@ const MemberCard = ({ member, animation }) => {
           alt={member.name}
           className="mx-auto h-40 w-40 md:h-56 md:w-56 object-cover border-1 border-black shadow-lg rounded-full"
         />
-        <h3 className="mt-2 sm:mt-4 text-sm sm:text-xl sm:font-semibold font-medium text-gray-900 text-center">
+        <h3 className="mt-2 sm:mt-4 text-lg md:text-xl sm:font-semibold font-medium text-gray-900 text-center">
           {member.name}
         </h3>
-        <p className="sm:font-medium font-base text-center text-gray-500 sm:text-base text-sm">{member.role}</p>
+        <p className="font-medium text-center text-gray-500 sm:text-base text-sm">{member.role}</p>
 
         <div className="grid grid-cols-2 text-center mt-2 sm:mt-4 border-b">
           {["bio", "experience"].map((tab) => (
