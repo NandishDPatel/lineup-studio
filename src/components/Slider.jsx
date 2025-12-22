@@ -53,7 +53,7 @@ const ProjectSlider = forwardRef((props, ref) => {
             className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
             onClick={() => handleImageClick(project)}
           >
-            <Suspense fallback={()=><div>Loading office images slider...</div>}>
+            <Suspense fallback={<div>Loading office images slider...</div>}>
               <BlurImage
                 img={project.image[0]}
                 blurredImg={project.imageBlurred[0]}

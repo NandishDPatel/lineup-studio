@@ -12,11 +12,7 @@ const ImageWithBlur = ({ img, blurredImg, alt }) => {
           backgroundImage: `url(${blurredImg})`,
         }}
         decoding="async"
-      >
-        {/* <picture>
-          <img src={blurredImg} alt="blurred image" fetchPriority="high" srcset="" />
-        </picture> */}
-      </div>
+      ></div>
 
       <img
         src={img}
@@ -30,7 +26,6 @@ const ImageWithBlur = ({ img, blurredImg, alt }) => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         loading="lazy"
-        // decoding="async"
       />
     </div>
   );
