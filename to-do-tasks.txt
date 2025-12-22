@@ -33,19 +33,7 @@ https://blog.webdevsimplified.com/2023-05/lazy-load-images/
     />
     <meta name="author" content="Lineup Studio" />
 
-     Mobile -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> --> -->
-
-    <!-- Open Graph (Google + social sharing)
-    <meta
-      property="og:title"
-      content="Lineup Studio | Architecture & Interior Design"
-    />
-    <meta
-      property="og:description"
-      content="Designing modern and sustainable architectural spaces."
-    /> -->
-   
+    
     <!-- <link rel="icon" href="./logo.jpg" /> -->
 
     <!-- Permissions -->

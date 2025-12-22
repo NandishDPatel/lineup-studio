@@ -1,45 +1,55 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  useEffect,
+  useRef,
+  useState,
+  lazy,
+  Suspense,
+} from "react";
 import { studioPhotos } from "../data/studio";
 import { motion } from "motion/react";
 import Flickity from "flickity";
 import "flickity/css/flickity.css";
 import "../App.css";
+// import BlurImage from "./atoms/BlurImage";
 
-export const BlurImage = ({ img, blurredImg, alt }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
 
-  return (
-    <div className="relative h-full w-full overflow-hidden">
-      <div
-        className={`absolute inset-0 bg-cover bg-center blur-lg transition-opacity duration-500 border border-2 border-black ${
-          isLoaded ? "opacity-0" : "opacity-100"
-        }`}
-        style={{
-          backgroundImage: `url(${blurredImg})`,
-        }}
-      ></div>
+// export const BlurImage = ({ img, blurredImg, alt }) => {
+//   const [isLoaded, setIsLoaded] = useState(false);
 
-      <picture >
-        <img
-          src={img}
-          role="presentation"
-          alt={alt}
-          onLoad={() => setIsLoaded(true)}
-          onError={() => {
-            console.error("Image failed to load:", img);
-            setIsLoaded(true);
-          }}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 border border-2 border-black ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          decoding="sync"
-          fetchPriority="high"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  );
-};
+//   return (
+//     <div className="relative h-full w-full overflow-hidden">
+//       <div
+//         className={`absolute inset-0 bg-cover bg-center blur-lg transition-opacity duration-500 border border-2 border-black ${
+//           isLoaded ? "opacity-0" : "opacity-100"
+//         }`}
+//         style={{
+//           backgroundImage: `url(${blurredImg})`,
+//         }}
+//       ></div>
+
+//       <picture >
+//         <img
+//           src={img}
+//           role="presentation"
+//           alt={alt}
+//           onLoad={() => setIsLoaded(true)}
+//           onError={() => {
+//             console.error("Image failed to load:", img);
+//             setIsLoaded(true);
+//           }}
+//           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 border border-2 border-black ${
+//             isLoaded ? "opacity-100" : "opacity-0"
+//           }`}
+//           decoding="sync"
+//           fetchPriority="high"
+//           loading="lazy"
+//         />
+//       </picture>
+//     </div>
+//   );
+// };
 
 const Studio = forwardRef((props, ref) => {
   const galleryRef = useRef(null);
@@ -83,11 +93,18 @@ const Studio = forwardRef((props, ref) => {
               key={photo.id}
               className="gallery-cell flex-shrink-0 w-full h-[60vh] sm:h-screen flex items-center justify-center"
             >
-              <BlurImage
+              <Suspense fallback={()=><div>Office photos loading</div>}>
+                <BlurImage
+                  img={photo.url}
+                  blurredImg={photo.blurred}
+                  alt="Studio Image"
+                />
+              </Suspense>
+              {/* <BlurImage
                 img={photo.url}
                 blurredImg={photo.blurred}
                 alt="Studio Image"
-              />
+              /> */}
             </div>
           ))}
         </div>

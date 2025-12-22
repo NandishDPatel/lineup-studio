@@ -1,11 +1,12 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef, lazy, Suspense } from "react";
 import Flickity from "flickity";
 import "flickity/css/flickity.css";
 import { projects } from "../data/project.js";
 import { motion } from "motion/react";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
-import { BlurImage } from "./Studio.jsx";
+// import { BlurImage } from "./Studio.jsx";
+const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
 
 const ProjectSlider = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -26,7 +27,7 @@ const ProjectSlider = forwardRef((props, ref) => {
   useEffect(() => {
     const flkty = new Flickity(".gallery", {
       wrapAround: true,
-      autoPlay: 5000,
+      // autoPlay: 5000,
       prevNextButtons: true,
       pageDots: false,
       cellAlign: "center",
@@ -52,11 +53,14 @@ const ProjectSlider = forwardRef((props, ref) => {
             className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
             onClick={() => handleImageClick(project)}
           >
-            <BlurImage
-              img={project.image[0]}
-              blurredImg={project.imageBlurred[0]}
-              alt={project.title}
-            />
+            <Suspense fallback={()=><div>Loading office images slider...</div>}>
+              <BlurImage
+                img={project.image[0]}
+                blurredImg={project.imageBlurred[0]}
+                alt={project.title}
+              
+              />
+            </Suspense>
 
             <motion.h1
               whileInView={{ opacity: 1 }}
