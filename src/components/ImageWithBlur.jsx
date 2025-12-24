@@ -26,7 +26,6 @@ const ImageWithBlur = ({ img, blurredImg, alt }) => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
         loading="lazy"
-        decoding="async"
       />
     </div>
   );
