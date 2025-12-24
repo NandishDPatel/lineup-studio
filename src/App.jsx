@@ -23,7 +23,7 @@ function App() {
           key="landing"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }} // fade-out duration
+          transition={{ duration: 1 }}
         >
           <LandingPage />
         </motion.div>
@@ -32,7 +32,7 @@ function App() {
           key="home"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }} // fade-in duration
+          transition={{ duration: 1 }}
         >
           <Header />
           <Content />
@@ -40,11 +40,6 @@ function App() {
         </motion.div>
       )}
     </AnimatePresence>
-    // <>
-    //   <Header />
-    //   <Content />
-    //   <Footer />
-    // </>
   );
 }
 

@@ -1,43 +1,31 @@
 import React, { useState, useEffect, forwardRef, lazy, Suspense } from "react";
-import Flickity from "flickity";
-import "flickity/css/flickity.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { projects } from "../data/project.js";
 import { motion } from "motion/react";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
-// import { BlurImage } from "./Studio.jsx";
+
 const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
 
-const ProjectSlider = forwardRef((props, ref) => {
+const Slider = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = "hidden"; // Disable background scroll
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""; // Restore scroll
+      document.body.style.overflow = "";
     }
 
     return () => {
       document.body.style.overflow = "";
     };
   }, [isModalOpen]);
-
-  useEffect(() => {
-    const flkty = new Flickity(".gallery", {
-      wrapAround: true,
-      // autoPlay: 5000,
-      prevNextButtons: true,
-      pageDots: false,
-      cellAlign: "center",
-      contain: true,
-    });
-
-    return () => {
-      flkty.destroy();
-    };
-  }, []);
 
   const handleImageClick = (project) => {
     setSelectedProject(project);
@@ -46,48 +34,64 @@ const ProjectSlider = forwardRef((props, ref) => {
 
   return (
     <div className="slideshow bg-white max-w-full" id="slider" ref={ref}>
-      <div className="gallery js-flickity mx-auto bg-black text-center">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
-            onClick={() => handleImageClick(project)}
-          >
-            <Suspense fallback={<div>Loading office images slider...</div>}>
-              <BlurImage
-                img={project.image[0]}
-                blurredImg={project.imageBlurred[0]}
-                alt={project.title}
-              
-              />
-            </Suspense>
+      <div className="mx-auto bg-black text-center">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation
+          loop={true}
+          centeredSlides={true}
+          grabCursor={true}
+          speed={600}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          className="w-full h-screen"
+        >
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <div
+                className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
+                onClick={() => handleImageClick(project)}
+              >
+                <Suspense fallback={<div>Loading office images slider...</div>}>
+                  <BlurImage
+                    img={project.image[0]}
+                    blurredImg={project.imageBlurred[0]}
+                    alt={project.title}
+                  />
+                </Suspense>
 
-            <motion.h1
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              className="absolute top-5 transform w-full text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-black px-2 py-1 rounded tracking-wider font-extrabold"
-            >
-              {project.title}
-            </motion.h1>
-            <motion.h3
-              whileInView={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 3 }}
-              className="absolute top-20 w-full sm:text-sm text-xs text-black w-full tracking-wider font-medium"
-            >
-              {project.tagline}
-            </motion.h3>
-            <motion.h3
-              whileInView={{ opacity: 1, y: -50 }}
-              initial={{ opacity: 0, y: -120 }}
-              transition={{ duration: 2 }}
-              className="absolute bottom-10 w-full sm:text-sm text-xs sm:font-medium font-base tracking-wider text-black tracking-wider"
-            >
-              {project.tag}
-            </motion.h3>
-          </div>
-        ))}
+                <motion.h1
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 2 }}
+                  className="absolute top-15 transform w-full text-lg sm:text-2xl md:text-4xl font-semibold sm:font-medium text-black px-2 py-1 rounded tracking-wider font-extrabold"
+                >
+                  {project.title}
+                </motion.h1>
+                <motion.h3
+                  whileInView={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 3 }}
+                  className="absolute top-30 w-full sm:text-sm text-xs text-black w-full tracking-wider font-medium"
+                >
+                  {project.tagline}
+                </motion.h3>
+                <motion.h3
+                  whileInView={{ opacity: 1, y: -50 }}
+                  initial={{ opacity: 0, y: -120 }}
+                  transition={{ duration: 2 }}
+                  className="absolute bottom-8 w-full sm:text-sm text-xs sm:font-medium font-base tracking-wider text-black tracking-wider"
+                >
+                  {project.tag}
+                </motion.h3>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {isModalOpen && selectedProject && projects && (
@@ -136,4 +140,4 @@ const ProjectSlider = forwardRef((props, ref) => {
   );
 });
 
-export default ProjectSlider;
+export default Slider;

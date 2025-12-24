@@ -1,24 +1,35 @@
 import React, { Suspense } from "react";
-import ProjectSlider from "./Slider";
+import Slider from "./Slider";
 
 const About = React.lazy(() => import("./About"));
 const Achievement = React.lazy(() => import("./Achievement"));
 const TeamInfo = React.lazy(() => import("./TeamInfo"));
 const Studio = React.lazy(() => import("./Studio"));
 
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-[200px]">
+    <div className="animate-pulse text-gray-500">Loading...</div>
+  </div>
+);
+
 const Content = () => {
   return (
-    <>
-      <div className="w-full m-auto">
-        <ProjectSlider />
-        <About />
-        <Suspense fallback={<div>Loading data...</div>}>
-          <TeamInfo />
-          <Studio />
-          <Achievement />
-        </Suspense>
-      </div>
-    </>
+    <div className="w-full m-auto">
+      <Slider />
+      <About />
+
+      <Suspense fallback={<LoadingFallback />}>
+        <TeamInfo />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback />}>
+        <Studio />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback />}>
+        <Achievement />
+      </Suspense>
+    </div>
   );
 };
 
