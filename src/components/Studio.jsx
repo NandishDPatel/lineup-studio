@@ -1,4 +1,4 @@
-import React, { forwardRef, lazy, Suspense } from "react";
+import React, { forwardRef, lazy, Suspense, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -6,10 +6,12 @@ import "swiper/css/navigation";
 import { studioPhotos } from "../data/studio";
 import { motion } from "motion/react";
 import "../App.css";
-
-const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
+import BlurImage from "./atoms/BlurImage.jsx";
 
 const Studio = forwardRef((props, ref) => {
+  
+  const sliderImages = studioPhotos;
+
   return (
     <div className="container max-w-full lg:px-32 sm:px-12 px-5 bg-gray-200 py-5">
       <div className="p-1 sm:p-3">
@@ -27,18 +29,17 @@ const Studio = forwardRef((props, ref) => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1}
           navigation
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
           }}
-          speed={600}
+          speed={800}
           grabCursor={true}
           className="mx-auto text-center"
         >
-          {studioPhotos.map((photo) => (
+          {sliderImages.map((photo) => (
             <SwiperSlide key={photo.id}>
               <div className="gallery-cell flex-shrink-0 w-full h-[60vh] sm:h-screen flex items-center justify-center">
                 <Suspense fallback={<div>Office photos loading</div>}>

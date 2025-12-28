@@ -12,12 +12,12 @@ const LandingPage = () => {
             el="h1"
             className="text-3xl tracking-normal sm:tracking-wide sm:text-[50px] lg:text-[100px] font-small text-black text-center"
             once={false}
-            repeatDelay={5000}
+            repeatDelay={4500}
           />
         </div>
         <div className="flex items-center justify-center mt-10">
           <img
-            src="/logo-removebg-preview.png"
+            src="/icons/logo-removebg-preview.png"
             alt="Lineup Studio Logo"
             className="absolute bottom-10 h-24 w-24 sm:h-32 sm:w-32 object-contain rounded-md hover:cursor-pointer"
           />

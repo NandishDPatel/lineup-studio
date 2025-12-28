@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BlurImage = ({ img, blurredImg, alt }) => {
+const BlurImage = ({ img, blurredImg, alt, priority = false }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -27,7 +27,8 @@ const BlurImage = ({ img, blurredImg, alt }) => {
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 border border-2 border-black ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
-          loading="lazy"
+          fetchPriority={priority ? "high" : "low"}
+          loading={priority ? "eager" : "lazy"}
         />
       </picture>
     </div>

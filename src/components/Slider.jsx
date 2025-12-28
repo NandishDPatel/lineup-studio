@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef, lazy, Suspense } from "react";
+import React, { useState, useEffect, forwardRef, lazy, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -8,11 +8,15 @@ import { projects } from "../data/project.js";
 import { motion } from "motion/react";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
+import { heroImages } from "../data/heroImages.js";
 
-const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
+import BlurImage from "./atoms/BlurImage.jsx";
+// const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
+
+const projectData = projects;
 
 const Slider = forwardRef((props, ref) => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null); //object
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -21,14 +25,13 @@ const Slider = forwardRef((props, ref) => {
     } else {
       document.body.style.overflow = "";
     }
-
     return () => {
       document.body.style.overflow = "";
     };
   }, [isModalOpen]);
 
-  const handleImageClick = (project) => {
-    setSelectedProject(project);
+  const handleImageClick = (projectId) => {
+    setSelectedProject(projects[projectId-1]);
     setIsModalOpen(true);
   };
 
@@ -43,26 +46,28 @@ const Slider = forwardRef((props, ref) => {
           loop={true}
           centeredSlides={true}
           grabCursor={true}
-          speed={600}
+          speed={800}
           autoplay={{
-            delay: 5000,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           className="w-full h-screen"
+          lazy={{
+            loadPrevNext: true,
+          }}
         >
-          {projects.map((project) => (
+          {heroImages.map((project,index) => (
             <SwiperSlide key={project.id}>
               <div
                 className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
-                onClick={() => handleImageClick(project)}
+                onClick={() => handleImageClick(project.id)}
               >
-                <Suspense fallback={<div>Loading office images slider...</div>}>
-                  <BlurImage
-                    img={project.image[0]}
-                    blurredImg={project.imageBlurred[0]}
-                    alt={project.title}
-                  />
-                </Suspense>
+                <BlurImage
+                  img={project.image}
+                  blurredImg={project.imageBlurred}
+                  alt={project.title}
+                  priority={index === 0}
+                />
 
                 <motion.h1
                   whileInView={{ opacity: 1 }}
@@ -94,7 +99,7 @@ const Slider = forwardRef((props, ref) => {
         </Swiper>
       </div>
 
-      {isModalOpen && selectedProject && projects && (
+      {isModalOpen && selectedProject && projectData && (
         <div className="fixed inset-0 bg-black text-white bg-opacity-90 z-50 flex flex-col">
           <div className="flex justify-between p-3">
             <div></div>
