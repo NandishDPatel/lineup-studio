@@ -15,7 +15,7 @@ const Header = () => {
       <div className="mx-auto flex items-center justify-between px-4">
         <div className="flex-shrink-0">
           <img
-            src="/logo-removebg-preview.png"
+            src="/icons/logo-removebg-preview.png"
             alt="Lineup Studio Logo"
             className="h-16 w-auto object-contain rounded-md hover:cursor-pointer"
             onClick={() => scrollToSection("slider")}
@@ -61,7 +61,7 @@ const Header = () => {
             aria-label="Instagram"
           >
             <img
-              src="/download.png"
+              src="/icons/download.png"
               alt="Instagram"
               className="h-8 w-8 object-contain"
             />
