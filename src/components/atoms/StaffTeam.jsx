@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { staffMembers } from "../data/teamInfo";
+import { staffMembers } from "../../data/teamInfo";
 import { motion } from "motion/react";
 
 const MemberCard = ({ member, animation }) => {

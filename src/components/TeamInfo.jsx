@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-import MainTeam from "./MainTeam";
-import StaffTeam from "./StaffTeam";
+import MainTeam from "./atoms/MainTeam";
+import StaffTeam from "./atoms/StaffTeam";
 
 const TeamInfo = () => {
   return (
