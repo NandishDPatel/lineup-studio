@@ -19,10 +19,10 @@ const MemberCard = ({ member, animation }) => {
           alt={member.name}
           className="mx-auto h-40 w-40 md:h-56 md:w-56 object-cover border-1 border-black shadow-md rounded-full"
         />
-        <h3 className="mt-4 text-lg md:text-xl font-semibold text-gray-900 text-center">
+        <h1 className="mt-4 text-lg md:text-xl font-semibold text-gray-900 text-center">
           {member.name}
-        </h3>
-        <p className="text-gray-500 font-medium text-center text-black">{member.role}</p>
+        </h1>
+        <h2 className="text-gray-500 font-medium text-center text-black">{member.role}</h2>
       </div>
     </motion.div>
   );

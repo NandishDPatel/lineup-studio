@@ -19,10 +19,12 @@ const MemberCard = ({ member, animation }) => {
           alt={member.name}
           className="mx-auto h-40 w-40 md:h-56 md:w-56 object-cover border-1 border-black shadow-lg rounded-full"
         />
-        <h3 className="mt-2 sm:mt-4 text-lg md:text-xl sm:font-semibold font-medium text-gray-900 text-center">
+        <h1 className="mt-2 sm:mt-4 text-lg md:text-xl sm:font-semibold font-medium text-gray-900 text-center">
           {member.name}
-        </h3>
-        <p className="font-medium text-center text-gray-500 sm:text-base text-sm">{member.role}</p>
+        </h1>
+        <h2 className="font-medium text-center text-gray-500 sm:text-base text-sm">
+          {member.role}
+        </h2>
 
         <div className="grid grid-cols-2 text-center mt-2 sm:mt-4 border-b">
           {["bio", "experience"].map((tab) => (
@@ -43,7 +45,10 @@ const MemberCard = ({ member, animation }) => {
         <div className="mt-2 sm:mt-4 text-gray-600 sm:text-sm text-xs text-black min-h-[130px]">
           {activeTab === "bio" && (
             <ul className="list-none">
-              <li className="text-justify sm:text-base text-sm text-black"> {member.bio} </li>{" "}
+              <li className="text-justify sm:text-base text-sm text-black">
+                {" "}
+                {member.bio}{" "}
+              </li>{" "}
             </ul>
           )}
 

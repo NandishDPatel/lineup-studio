@@ -15,7 +15,11 @@ const Footer = forwardRef((props, ref) => {
   };
   return (
     <>
-      <div className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 " id="contactSec" ref={ref}>
+      <div
+        className="relative container max-w-full mx-auto lg:px-32 sm:px-12 px-5 bg-gray-200 "
+        id="contactSec"
+        ref={ref}
+      >
         <div className="p-3">
           <motion.h1
             whileInView={{ opacity: 1 }}
@@ -41,18 +45,15 @@ const Footer = forwardRef((props, ref) => {
             onClick={() => scrollToSection("slider")}
           >
             <img
-              className="font-bold hover:text-white"
+              className="font-bold hover:text-white h-[15px] w-[15px]"
               src="/icons/up-arrow-svgrepo-com.svg"
-              height="15px"
-              width="15px"
+              alt="Up Arrow Icon"
             />
           </motion.div>
           <div className="text-center">
-            <p>lineup.00studio@gmail.com</p>
+            <p className="font-medium">lineup.00studio@gmail.com</p>
+            <p className="mt-2">© 2025 LineUp Studio | All rights are reserved</p>
           </div>
-          <p className="text-center">
-            © 2025 LineUp Studio | All rights are reserved{" "}
-          </p>
         </div>
       </div>
     </>

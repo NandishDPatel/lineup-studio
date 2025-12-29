@@ -10,14 +10,14 @@ const LandingPage = () => {
           <AnimatedText
             text={["L I N E U P  S T U D I O"]}
             el="h1"
-            className="text-3xl tracking-normal sm:tracking-wide sm:text-[50px] lg:text-[100px] font-small text-black text-center"
+            className="text-3xl tracking-normal md:tracking-tight sm:tracking-wide sm:text-[50px] md:text-[70px] lg:text-[100px] font-small text-black text-center"
             once={false}
-            repeatDelay={4500}
+            repeatDelay={3500}
           />
         </div>
         <div className="flex items-center justify-center mt-10">
           <img
-            src="/icons/logo-removebg-preview.png"
+            src="/icons/logo-removebg-preview.webp"
             alt="Lineup Studio Logo"
             className="absolute bottom-10 h-24 w-24 sm:h-32 sm:w-32 object-contain rounded-md hover:cursor-pointer"
           />
@@ -33,16 +33,16 @@ export const AnimatedText = ({
   className,
   once,
   repeatDelay,
-  staggerSpeed = 0.15,
+  staggerSpeed = 0.10,
   animation = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.05 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.10 } },
   },
 }) => {
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once });
+  const isInView = useInView(ref, { amount: 0.2, once });
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export const AnimatedText = ({
           {textArray.map((line, lineIndex) => (
             <span
               className={`block ${
-                lineIndex === 1 ? "ml-32 mt-10 md:ml-32" : "sm:m-2"
+                lineIndex === 1 ? "ml-32 mt-10 md:ml-16" : "sm:m-2"
               }`}
               key={`${line}-${lineIndex}`}
             >

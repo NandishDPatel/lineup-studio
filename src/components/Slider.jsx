@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef, lazy, useMemo } from "react";
+import React, { useState, useEffect, forwardRef} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -9,14 +9,10 @@ import { motion } from "motion/react";
 import "../App.css";
 import ImageWithBlur from "./ImageWithBlur.jsx";
 import { heroImages } from "../data/heroImages.js";
-
 import BlurImage from "./atoms/BlurImage.jsx";
-// const BlurImage = lazy(() => import("./atoms/BlurImage.jsx"));
 
-const projectData = projects;
-
-const Slider = forwardRef((props, ref) => {
-  const [selectedProject, setSelectedProject] = useState(null); //object
+const Slider = forwardRef((props,ref) => {
+  const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -63,7 +59,7 @@ const Slider = forwardRef((props, ref) => {
                 onClick={() => handleImageClick(project.id)}
               >
                 <BlurImage
-                  img={project.image}
+                  imgArr={[project.desktop, project.tablet, project.mobile]}
                   blurredImg={project.imageBlurred}
                   alt={project.title}
                   priority={index === 0}
@@ -77,14 +73,14 @@ const Slider = forwardRef((props, ref) => {
                 >
                   {project.title}
                 </motion.h1>
-                <motion.h3
+                <motion.h2
                   whileInView={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
                   transition={{ duration: 3 }}
                   className="absolute top-30 w-full sm:text-sm text-xs text-black w-full tracking-wider font-medium"
                 >
                   {project.tagline}
-                </motion.h3>
+                </motion.h2>
                 <motion.h3
                   whileInView={{ opacity: 1, y: -50 }}
                   initial={{ opacity: 0, y: -120 }}
@@ -99,7 +95,7 @@ const Slider = forwardRef((props, ref) => {
         </Swiper>
       </div>
 
-      {isModalOpen && selectedProject && projectData && (
+      {isModalOpen && selectedProject && (
         <div className="fixed inset-0 bg-black text-white bg-opacity-90 z-50 flex flex-col">
           <div className="flex justify-between p-3">
             <div></div>
@@ -126,7 +122,7 @@ const Slider = forwardRef((props, ref) => {
              scrollbar-track-transparent
              px-3"
           >
-            {selectedProject.image.map((img, index) => (
+            {selectedProject.tablet.map((img, index) => (
               <ImageWithBlur
                 key={index}
                 img={img}

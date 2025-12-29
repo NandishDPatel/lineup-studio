@@ -10,7 +10,7 @@ export const teamMembers = [
       "Research assistant at DICRC, CEPT University (1 year)",
       "Interior designer at Alkesh Patel and Associate (3 years)",
     ],
-    image: "/profile-pictures/isha.jpg",
+    image: "/profile-pictures/isha.webp",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const teamMembers = [
       "Interior designer at APA and Marigold Interiors (3 years)",
       "Interned at Hiren Patel Architects"
     ],
-    image: "/profile-pictures/deval.jpg",
+    image: "/profile-pictures/deval.webp",
   },
 ];
 
@@ -32,7 +32,7 @@ export const staffMembers = [
     id: 1,
     name: "Dhara Thakkar",
     role: "Junior Architect",
-    image: "/profile-pictures/dhara.jpg",
+    image: "/profile-pictures/dhara.webp",
   },
 ];
 
@@ -40,7 +40,7 @@ export const LineupMission =
   "Line Up Studio, based in Ahmedabad, is a dynamic design firm specializing in Architecture, Interior, and Landscape Designing in residential, commercial and retail segments. With over 8 years of experience, our passionate duo is committed to core design values, creating spaces that seamlessly blend functionality and aesthetics. We prioritize not just the final outcome but also the design process, ensuring a thoughtful and fulfilling experience for every user.";
 
 export const AchievementDesc = {
-  image: "/achievement/achievement.jpg",
+  image: "/achievement/achievement.webp",
   desc: "We are a team of two passionate designers, Ar. Isha Bodawala and Ar. Deval Patel, who believe in the power of design to transform spaces and lives. Our mission is to create environments that inspire, uplift, and enhance the human experience. With a focus on innovation, sustainability, and user-centric design, we strive to deliver exceptional results that exceed our clients' expectations.",
   awardDesc:
     "National Architecture and Interior Design Excellence Awards 2024.",
