@@ -1,7 +1,11 @@
+import { table } from "framer-motion/client";
+
 export const heroImages = [
   {
     id: 1,
-    image: "/projects/proj1/reduced-quality/IMG_2391.jpeg",
+    desktop: "/projects/proj1/desktop/IMG_2391-1600.webp",
+    tablet: "/projects/proj1/tablet/IMG_2391-960.webp",
+    mobile: "/projects/proj1/mobile/IMG_2391-480.webp",
     imageBlurred: "/projects/proj1/blurred/IMG_2391-blurr.jpeg",
     title: "Heaven of Hearts",
     tagline: "memorable moments in memorable spaces",
@@ -10,7 +14,9 @@ export const heroImages = [
   },
   {
     id: 2,
-    image: "/projects/proj2/reduced-quality/IMG_0160.JPG",
+    desktop: "/projects/proj2/desktop/IMG_0160-1600.webp",
+    tablet: "/projects/proj2/tablet/IMG_0160-960.webp",
+    mobile: "/projects/proj2/mobile/IMG_0160-480.webp",
     imageBlurred: "/projects/proj2/blurred/IMG_0160-blurr.jpeg",
     title: "A Cozy House",
     tagline: "comfort in every color, harmony in every corner",
@@ -19,7 +25,9 @@ export const heroImages = [
   },
   {
     id: 3,
-    image: "/projects/proj3/reduced-quality/00.jpg",
+    desktop: "/projects/proj3/desktop/00-1600.webp",
+    tablet: "/projects/proj3/tablet/00-960.webp",
+    mobile: "/projects/proj3/mobile/00-480.webp",
     imageBlurred: "/projects/proj3/blurred/00-blurr.jpeg",
     title: "Dramatic Office",
     tagline: "where bold design meets inspired work",
@@ -28,7 +36,9 @@ export const heroImages = [
   },
   {
     id: 4,
-    image: "/projects/proj4/reduced-quality/01.jpg",
+    desktop: "/projects/proj4/desktop/01-1600.webp",
+    tablet: "/projects/proj4/tablet/01-960.webp",
+    mobile: "/projects/proj4/mobile/01-480.webp",
     imageBlurred: "/projects/proj4/blurred/01-blurr.jpeg",
     title: "Serene Abode",
     tagline: "calmness dwells here",
@@ -37,7 +47,9 @@ export const heroImages = [
   },
   {
     id: 5,
-    image: "/projects/proj5/reduced-quality/DSC05161.jpg",
+    desktop: "/projects/proj5/desktop/DSC05161-1600.webp",
+    tablet: "/projects/proj5/tablet/DSC05161-960.webp",
+    mobile: "/projects/proj5/mobile/DSC05161-480.webp",
     imageBlurred: "/projects/proj5/blurred/DSC05161-blurr.jpeg",
     title: "Toy Stories",
     tagline: "designed for playful tales",
@@ -46,7 +58,9 @@ export const heroImages = [
   },
   {
     id: 6,
-    image: "/projects/proj6/reduced-quality/01.jpeg",
+    desktop: "/projects/proj6/desktop/01-1600.webp",
+    tablet: "/projects/proj6/tablet/01-960.webp",
+    mobile: "/projects/proj6/mobile/01-480.webp",
     imageBlurred: "/projects/proj6/blurred/01-blurred.jpeg",
     title: "Monotonous House",
     tagline: "best landascape project ever in ahmedabad",
