@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { projects } from "../data/project.js";
 import { motion } from "motion/react";
 import "../App.css";
-import ImageWithBlur from "./ImageWithBlur.jsx";
+import ImageWithBlur from "./atoms/ImageWithBlur.jsx";
 import { heroImages } from "../data/heroImages.js";
 import BlurImage from "./atoms/BlurImage.jsx";
 

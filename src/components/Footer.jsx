@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
-import MapEmbed from "./MapEmbed";
-import ContactForm from "./ContactForm";
+import MapEmbed from "./atoms/MapEmbed";
+import ContactForm from "./atoms/ContactForm";
 import { motion } from "motion/react";
 
 const Footer = forwardRef((props, ref) => {
