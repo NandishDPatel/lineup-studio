@@ -25,8 +25,8 @@ const BlurImage = ({ imgArr, blurredImg, alt, priority = false }) => {
       <picture>
         <img
           src={imgArr[0]}
-          srcSet={`${imgArr[0]} 1600w, ${imgArr[1]} 960w, ${imgArr[2]} 480w`}
-          sizes="(min-width: 1024px) 1600px, (min-width: 640px) 960px, 480px"
+          srcSet={`${imgArr[0]} 1600w, ${imgArr[1]} 960w, ${imgArr[2]} 480w, ${imgArr[3]} 220w`}
+          sizes="(min-width: 1024px) 1600px, (min-width: 640px) 960px, 480px, 220px"
           role="presentation"
           alt={alt}
           onLoad={() => setIsLoaded(true)}

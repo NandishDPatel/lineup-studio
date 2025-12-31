@@ -19,7 +19,7 @@ const LandingPage = () => {
           <img
             src="/icons/logo-removebg-preview.webp"
             alt="Lineup Studio Logo"
-            className="absolute bottom-10 h-24 w-24 sm:h-32 sm:w-32 object-contain rounded-md hover:cursor-pointer"
+            className="absolute bottom-10 h-[50px] sm:h-24 w-auto object-contain rounded-md hover:cursor-pointer"
           />
         </div>
       </div>
@@ -33,10 +33,10 @@ export const AnimatedText = ({
   className,
   once,
   repeatDelay,
-  staggerSpeed = 0.10,
+  staggerSpeed = 0.1,
   animation = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.10 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.1 } },
   },
 }) => {
   const controls = useAnimation();

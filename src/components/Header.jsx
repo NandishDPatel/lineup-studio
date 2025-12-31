@@ -1,3 +1,4 @@
+import { px } from "framer-motion";
 import React from "react";
 
 const Header = () => {
@@ -17,8 +18,10 @@ const Header = () => {
           <img
             src="/icons/logo-removebg-preview.webp"
             alt="Lineup Studio Logo"
-            className="h-16 w-auto object-contain rounded-md hover:cursor-pointer"
+            className="h-16 object-contain rounded-md hover:cursor-pointer"
             onClick={() => scrollToSection("slider")}
+            height="16px"
+            width="auto"
           />
         </div>
 
