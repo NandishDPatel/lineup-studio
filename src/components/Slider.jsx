@@ -10,10 +10,32 @@ import "../App.css";
 import ImageWithBlur from "./atoms/ImageWithBlur.jsx";
 import { heroImages } from "../data/heroImages.js";
 import BlurImage from "./atoms/BlurImage.jsx";
+import { fetchProjectsFromSupabase } from "../data/supabaseProjects.js";
 
 const Slider = forwardRef((props,ref) => {
+  const [projectItems, setProjectItems] = useState(projects);
+  const [heroItems, setHeroItems] = useState(heroImages);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetchProjectsFromSupabase()
+      .then((supabaseProjects) => {
+        if (!isMounted || !supabaseProjects.length) return;
+
+        setProjectItems(supabaseProjects);
+        setHeroItems(supabaseProjects);
+      })
+      .catch((error) => {
+        console.error("Unable to load Supabase projects:", error.message);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   useEffect(() => {
     if (isModalOpen) {
@@ -27,7 +49,7 @@ const Slider = forwardRef((props,ref) => {
   }, [isModalOpen]);
 
   const handleImageClick = (projectId) => {
-    setSelectedProject(projects[projectId-1]);
+    setSelectedProject(projectItems[projectId-1]);
     setIsModalOpen(true);
   };
 
@@ -52,15 +74,20 @@ const Slider = forwardRef((props,ref) => {
             loadPrevNext: true,
           }}
         >
-          {heroImages.map((project,index) => (
+          {heroItems.map((project,index) => (
             <SwiperSlide key={project.id}>
               <div
                 className="gallery-cell w-full h-screen relative cursor-pointer text-center text-white"
                 onClick={() => handleImageClick(project.id)}
               >
                 <BlurImage
-                  imgArr={[project.desktop, project.tablet, project.mobile]}
-                  blurredImg={project.imageBlurred}
+                  imgArr={[
+                    getProjectImage(project.desktop),
+                    getProjectImage(project.tablet),
+                    getProjectImage(project.mobile),
+                    getProjectImage(project.mobileSmall),
+                  ]}
+                  blurredImg={getProjectImage(project.imageBlurred)}
                   alt={project.title}
                   priority={index === 0}
                 />
@@ -140,5 +167,9 @@ const Slider = forwardRef((props,ref) => {
     </div>
   );
 });
+
+function getProjectImage(imageValue) {
+  return Array.isArray(imageValue) ? imageValue[0] : imageValue;
+}
 
 export default Slider;
