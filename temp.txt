@@ -1,0 +1,3 @@
+- Admin UI + Supabase integration 
+- Optimise images 
+- password: Lineup@123$12
