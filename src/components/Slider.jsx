@@ -23,6 +23,7 @@ const Slider = forwardRef((props,ref) => {
 
     fetchProjectsFromSupabase()
       .then((supabaseProjects) => {
+        console.log("Supabase result:", supabaseProjects.length, supabaseProjects)
         if (!isMounted || !supabaseProjects.length) return;
 
         setProjectItems(supabaseProjects);
